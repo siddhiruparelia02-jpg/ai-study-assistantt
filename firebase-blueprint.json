@@ -1,0 +1,214 @@
+{
+  "entities": {
+    "UserProfile": {
+      "path": "users/{userId}",
+      "fields": {
+        "displayName": "string",
+        "email": "string",
+        "photoURL": "string",
+        "bio": "string",
+        "phone": "string",
+        "college": "string",
+        "semester": "string",
+        "academic": "map",
+        "studyPreferences": "map",
+        "learningPreferences": "map",
+        "notifications": "map",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      }
+    },
+    "Subject": {
+      "path": "users/{userId}/subjects/{subjectId}",
+      "fields": {
+        "code": "string",
+        "name": "string",
+        "department": "string",
+        "semester": "string",
+        "color": "string",
+        "icon": "string",
+        "examDate": "string",
+        "daysUntilExam": "number",
+        "progressPercent": "number",
+        "totalChapters": "number",
+        "completedChapters": "number",
+        "materialsCount": "number",
+        "weakTopicsCount": "number",
+        "description": "string",
+        "targetScore": "number",
+        "topics": "array",
+        "updatedAt": "timestamp"
+      }
+    },
+    "StudyMaterial": {
+      "path": "users/{userId}/studyMaterials/{materialId}",
+      "fields": {
+        "title": "string",
+        "subjectId": "string",
+        "subjectCode": "string",
+        "type": "string",
+        "category": "string",
+        "topic": "string",
+        "fileSize": "string",
+        "uploadDate": "string",
+        "tags": "array",
+        "status": "string",
+        "summarySnippet": "string",
+        "fileContent": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      }
+    },
+    "Quiz": {
+      "path": "users/{userId}/quizzes/{quizId}",
+      "fields": {
+        "title": "string",
+        "subjectId": "string",
+        "subjectCode": "string",
+        "durationMinutes": "number",
+        "questionsCount": "number",
+        "difficulty": "string",
+        "timesTaken": "number",
+        "questions": "array",
+        "createdAt": "timestamp"
+      }
+    },
+    "QuizResult": {
+      "path": "users/{userId}/quizResults/{resultId}",
+      "fields": {
+        "quizId": "string",
+        "quizTitle": "string",
+        "subjectCode": "string",
+        "subjectName": "string",
+        "topicName": "string",
+        "difficulty": "string",
+        "scorePercent": "number",
+        "correctCount": "number",
+        "totalQuestions": "number",
+        "mistakes": "array",
+        "timestamp": "string",
+        "date": "string",
+        "createdAt": "timestamp"
+      }
+    },
+    "FlashcardDeck": {
+      "path": "users/{userId}/flashcardDecks/{deckId}",
+      "fields": {
+        "title": "string",
+        "subjectId": "string",
+        "subjectCode": "string",
+        "description": "string",
+        "cardCount": "number",
+        "masteredCount": "number",
+        "color": "string",
+        "lastStudied": "string",
+        "cards": "array",
+        "updatedAt": "timestamp"
+      }
+    },
+    "FlashcardSession": {
+      "path": "users/{userId}/flashcardSessions/{sessionId}",
+      "fields": {
+        "deckId": "string",
+        "deckTitle": "string",
+        "subjectCode": "string",
+        "subjectName": "string",
+        "topicName": "string",
+        "masteredCount": "number",
+        "reviewCount": "number",
+        "totalReviewed": "number",
+        "masteryPercent": "number",
+        "timestamp": "string",
+        "createdAt": "timestamp"
+      }
+    },
+    "Note": {
+      "path": "users/{userId}/notes/{noteId}",
+      "fields": {
+        "title": "string",
+        "subjectId": "string",
+        "subjectCode": "string",
+        "topic": "string",
+        "category": "string",
+        "style": "string",
+        "length": "string",
+        "summary": "string",
+        "contentMarkdown": "string",
+        "keyTakeaways": "array",
+        "tags": "array",
+        "isPinned": "boolean",
+        "readTimeMin": "number",
+        "dateModified": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      }
+    },
+    "WeakTopic": {
+      "path": "users/{userId}/weakTopics/{topicId}",
+      "fields": {
+        "topic": "string",
+        "subtopic": "string",
+        "subjectCode": "string",
+        "subjectName": "string",
+        "quizAttempts": "number",
+        "quizTotalQuestions": "number",
+        "quizCorrectAnswers": "number",
+        "quizIncorrectAnswers": "number",
+        "averageQuizScore": "number",
+        "flashcardsReviewed": "number",
+        "flashcardsNeedingReview": "number",
+        "flashcardsMastered": "number",
+        "flashcardMasteryPercent": "number",
+        "priority": "string",
+        "reason": "string",
+        "recommendedAction": "string",
+        "status": "string",
+        "lastPracticed": "string",
+        "mistakeExamples": "array",
+        "updatedAt": "timestamp"
+      }
+    },
+    "Activity": {
+      "path": "users/{userId}/activity/{activityId}",
+      "fields": {
+        "type": "string",
+        "title": "string",
+        "subjectCode": "string",
+        "timestamp": "string",
+        "scoreOrCount": "string",
+        "createdAt": "timestamp"
+      }
+    },
+    "PlannerPreferences": {
+      "path": "users/{userId}/planner/preferences",
+      "fields": {
+        "dailyStudyMinutes": "number",
+        "sessionLengthMinutes": "number",
+        "studyDays": "array",
+        "startDate": "string",
+        "endDate": "string",
+        "targetSubject": "string",
+        "updatedAt": "timestamp"
+      }
+    },
+    "StudyPlan": {
+      "path": "users/{userId}/planner/plans/{planId}",
+      "fields": {
+        "userId": "string",
+        "planId": "string",
+        "generatedAt": "string",
+        "startDate": "string",
+        "endDate": "string",
+        "preferences": "map",
+        "prioritySubjects": "array",
+        "days": "array",
+        "totalPlannedMinutes": "number",
+        "totalTasksCount": "number",
+        "completedTasksCount": "number",
+        "adaptationInsights": "array",
+        "isCurrent": "boolean",
+        "updatedAt": "timestamp"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "AI Study Assistant",
+  "description": "Comprehensive exam prep and study platform for college students with personalized AI study planning, smart notes, weak topic mastery, AI tutoring, quizzes, and flashcards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
